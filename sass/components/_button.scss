@@ -1,0 +1,13 @@
+%button{
+    @extend .font_default;
+    @extend .fs_normal;
+    padding: $root_spacer_1;
+    border-radius: $root_borderradius;
+    background-color: $color_cyan;
+    border: 2px solid $color_black;
+    cursor: pointer;
+}
+%button:hover{
+    background-color: rgba($color_white, 0.5);
+    @extend .fs_medium;
+}

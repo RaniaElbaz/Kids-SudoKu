@@ -1,0 +1,19 @@
+.image_rounded{
+    border-radius: 50%;
+}
+.image_top_rounded{
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.image_bottom_rounded{
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.image_size_default{
+    width: 100px;
+    height: 100px;
+}
+.image_size_small{
+    width: 50px;
+    height: 100px;
+}

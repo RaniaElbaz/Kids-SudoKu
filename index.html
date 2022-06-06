@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/main.css"/>
+    <link rel="icon" href="./assets/logo/logo.png"/>
+    <title>SoDuKo</title>
+</head>
+<body>
+    <!-- background video -->
+    <video id="background_video" autoplay loop muted poster="./assets/cover.PNG">
+        <source src="./assets/bgvideo.mp4" type="video/mp4">
+    </video>
+    <!-- end of background video -->
+
+    <!-- page container -->
+    <div class="maincontainer">
+        <!-- form: username and level number -->
+        <form class="login_form" action="./groups.html" method="get">
+            <img id="logo" src="./assets/logo/logos.png" alt="not found" title="soduko">
+            <!-- for username -->
+            <section class="form_group">
+                <label for="username">User Name</label>
+                <input type="text" name="username" autocomplete="off"/>
+                <!-- error text message -->
+                <span id="error_text"></span>
+            </section>
+            <!-- for level -->
+            <section class="form_group">
+                <label for="level">Level</label>
+                <select name="level">
+                    <option value="1">Level 1</option>
+                    <option value="2">Level 2</option>
+                </select>
+            </section>
+            <!-- submit -->
+            <button type="submit" id="login_button">Login</button>
+        </form>
+    </div>
+    <!-- end of page container -->
+
+    <!-- form validation file -->
+    <script src="./scripts/login_validation.js"></script>
+</body>
+</html>

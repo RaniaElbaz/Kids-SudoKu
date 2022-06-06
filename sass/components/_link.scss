@@ -1,0 +1,10 @@
+@import '../abstracts/variables';
+
+%link{
+    color: $--link__fgcolor;
+    cursor: pointer;
+}
+%link:hover{
+    color: $--fgcolor;
+    text-decoration: underline;
+}

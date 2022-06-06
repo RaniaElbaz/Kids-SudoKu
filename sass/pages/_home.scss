@@ -1,0 +1,94 @@
+.maincontainer{
+    @extend .font_default;
+    @extend .row;
+    padding: 0.5rem;
+    aside{
+        @extend .col-2;
+        @extend .px-1;
+        text-align: center;
+        border-left: 5px dotted $color_grey;
+        height: 95vh;
+        #timer{
+            @extend .fs_large;
+        }
+        #start_button{
+            @extend %button;
+            margin-top: 2rem;
+        }
+        #finish_button{
+            @extend %button;
+            margin-top: 2rem;
+        }
+        .result{
+            @extend .my-4;
+        }
+    }
+    .fragment{
+        @extend .col-10;
+        .select_container{
+            @extend .row;
+            justify-content: space-around;
+            margin-bottom: 0.5rem;
+            .image_small_container{
+                @extend .col-3;
+                padding: 0 0.5rem;
+                text-align: center;
+                img{
+                    @extend .image_size_default;
+                }
+            }
+            .image_big_container{
+                width: 100/(9)*1%;
+                // height: 140px;
+                text-align: center;
+                img{
+                    // @extend  .image_size_default;
+                    height: 10vw;
+
+                }
+            }
+        }
+        main{
+            @extend .px-3;
+            .small_grid{
+                background-color: rgba($color_white,0.6);
+                border:2px solid $color_black;
+                .small_grid_row{
+                    border-bottom: 2px solid $color_black;
+                    .grid_row{
+                        .grid_cell:nth-child(2){
+                            border-right:2px solid $color_black;    
+                        }
+                        .grid_cell{
+                            border:1px solid $color_grey;
+                            height: 100px;
+                        }
+                    }
+                }
+            }
+            .big_grid{
+                background-color: rgba($color_white,0.6);
+                border:2px solid $color_black;
+                .big_grid_row{
+                    border-bottom: 2px solid $color_black;
+                    .grid_row{
+                        .grid_cell:nth-child(3),.grid_cell:nth-child(6){
+                            border-right:2px solid $color_black;    
+                        }
+                        .grid_cell{
+                            width: 100/(9)*1%;
+                            border:1px solid $color_grey;
+                            height: 65px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.selected{
+    box-shadow:5px 5px 30px $color_black inset;
+}
+.preset{
+    background-color: rgba($color_pink, 0.7);
+}

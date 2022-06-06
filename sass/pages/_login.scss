@@ -1,0 +1,29 @@
+.login_form{
+    @extend .container;
+    #logo{
+       width: 40vh;
+    }
+    label{
+        @extend %label;
+    }
+    .form_group{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 5%;
+        margin-bottom: $root_spacer_2;
+        input, select{
+            @extend .fs_normal;
+            @extend .font_default;
+            width: 30%;
+            align-self: center;
+        }
+        span{
+            color: $color_error;
+            align-self: center;
+        }
+    }
+    button{
+        @extend %button;
+    }
+}

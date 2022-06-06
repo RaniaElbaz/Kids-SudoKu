@@ -1,0 +1,211 @@
+@mixin spacing($property) {
+    $p: 'm';
+    @if($property == 'margin'){
+        $p: 'm';
+    } @else {
+        @if($property == 'padding'){
+            $p: 'p';
+        }
+    }
+    @for $i from 0 through 5{
+        .#{$p}t-#{$i}{
+            #{$property}-top: #{$i}rem;
+        }
+        .#{$p}b-#{$i}{
+            #{$property}-bottom: #{$i}rem;
+        }
+        .#{$p}r-#{$i}{
+            #{$property}-right: #{$i}rem;
+        }
+        .#{$p}l-#{$i}{
+            #{$property}-left: #{$i}rem;
+        }
+        .#{$p}x-#{$i}{
+            #{$property}-left: #{$i}rem;
+            #{$property}-right: #{$i}rem;
+        }
+        .#{$p}y-#{$i}{
+            #{$property}-top: #{$i}rem;
+            #{$property}-bottom: #{$i}rem;
+        }
+    }
+}
+@mixin spacingScreenName($property, $screenName) {
+    $p: 'm';
+    @if($property == 'margin'){
+        $p: 'm';
+    } @else {
+        @if($property == 'padding'){
+            $p: 'p';
+        }
+    }
+    @for $i from 0 through 5{
+        .#{$p}t-#{$screenName}-#{$i}{
+            #{$property}-top: #{$i}rem;
+        }
+        .#{$p}b-#{$screenName}-#{$i}{
+            #{$property}-bottom: #{$i}rem;
+        }
+        .#{$p}r-#{$screenName}-#{$i}{
+            #{$property}-right: #{$i}rem;
+        }
+        .#{$p}l-#{$screenName}-#{$i}{
+            #{$property}-left: #{$i}rem;
+        }
+        .#{$p}x-#{$screenName}-#{$i}{
+            #{$property}-left: #{$i}rem;
+            #{$property}-right: #{$i}rem;
+        }
+        .#{$p}y-#{$screenName}-#{$i}{
+            #{$property}-top: #{$i}rem;
+            #{$property}-bottom: #{$i}rem;
+        }
+    }
+}
+@mixin gridgenerator($numberofcolumns, $screenName, $breakpoint) {
+    @if ($screenName=="") {
+        @media screen and (min-width: 0px){
+            .container{
+                width: 100%;
+            }
+            .d-none{
+                display: none;
+            }
+            .d-block{
+                display: block;
+            }
+            @for $i from 1 through $numberofcolumns{
+                .col-#{$i}{
+                    width: 100/($numberofcolumns/$i)*1%;
+                }
+                .offset-#{$i}{
+                    margin-left: 100/($numberofcolumns/$i)*1%;
+                }
+                .order-#{$i}{
+                    order: $i;
+                }
+            }
+            .mt-auto{
+                margin-top: auto;
+            }
+            .mb-auto{
+                margin-bottom: auto;
+            }
+            .ml-auto{
+                margin-left: auto;
+            }
+            .mr-auto{
+                margin-right: auto;
+            }
+            .mx-auto{
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .my-auto{
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+            .pt-auto{
+                padding-top: auto;
+            }
+            .pb-auto{
+                padding-bottom: auto;
+            }
+            .pl-auto{
+                padding-left: auto;
+            }
+            .pr-auto{
+                padding-right: auto;
+            }
+            .px-auto{
+                padding-right: auto;
+                padding-left: auto;
+            }
+            .py-auto{
+                padding-top: auto;
+                padding-bottom: auto;
+            }
+            @include spacing('margin');
+            @include spacing('padding');
+        }
+    } @else {
+        @media screen and (min-width: $breakpoint){
+            .container{
+                width: 90%;
+                margin: auto;
+            }
+            .d-#{$screenName}-none{
+                display: none;
+            }
+            .d-#{$screenName}-block{
+                display: block;
+            }
+            @for $i from 1 through $numberofcolumns{
+                .col-#{$screenName}-#{$i}{
+                    width: 100/($numberofcolumns/$i)*1%;
+                }
+                .offset-#{$screenName}-#{$i}{
+                    margin-left: 100/($numberofcolumns/$i)*1%;
+                }
+                .order-#{$screenName}-#{$i}{
+                    order: $i;
+                }
+            }
+            @include spacingScreenName('margin', $screenName);
+            @include spacingScreenName('padding', $screenName);
+            .mt-#{$screenName}-auto{
+                margin-top: auto;
+            }
+            .mb-#{$screenName}-auto{
+                margin-bottom: auto;
+            }
+            .ml-#{$screenName}-auto{
+                margin-left: auto;
+            }
+            .mr-#{$screenName}-auto{
+                margin-right: auto;
+            }
+            .mx-#{$screenName}-auto{
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .my-#{$screenName}-auto{
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+            .pt-#{$screenName}-auto{
+                padding-top: auto;
+            }
+            .pb-#{$screenName}-auto{
+                padding-bottom: auto;
+            }
+            .pl-#{$screenName}-auto{
+                padding-left: auto;
+            }
+            .pr-#{$screenName}-auto{
+                padding-right: auto;
+            }
+            .px-#{$screenName}-auto{
+                padding-right: auto;
+                padding-left: auto;
+            }
+            .py-#{$screenName}-auto{
+                padding-top: auto;
+                padding-bottom: auto;
+            }
+        }
+    }
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-fluid{
+    width: 100%;
+}
+@include gridgenerator(12, "", 0px);
+@include gridgenerator(12, "sm", 576px);
+@include gridgenerator(12, "md", 768px);
+@include gridgenerator(12, "lg", 992px);
+@include gridgenerator(12, "xl", 1200px);
+@include gridgenerator(12, "xxl", 1400px);

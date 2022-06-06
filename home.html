@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./stylesheets/main.css">
+    <link rel="icon" href="./assets/logo/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soduko</title>
+</head>
+<body>
+    <!-- background video -->
+    <video id="background_video" autoplay loop muted poster="./assets/cover.PNG">
+        <source src="./assets/bgvideo.mp4" type="video/mp4">
+    </video>
+    <!-- end of background video -->
+
+    <!-- page container -->
+    <div class="maincontainer">
+        <!-- main content -->
+        <div class="fragment">
+            <!-- top bar of selected images -->
+            <section class="select_container">
+                <!-- selected group of images to be shown here -->
+            </section>
+            <!-- end of top bar -->
+
+            <!-- grids -->
+            <main>
+                <!-- small grid 4x4 -->
+                <section class="d-none small_grid mx-auto col-10">
+                    <!-- outer row -->
+                    <section class="small_grid_row">
+                        <!-- inner row  -->
+                        <section class="grid_row row">
+                            <section class="grid_cell col-3 selected"></section>
+                            <section class="grid_cell col-3"></section>
+                            <section class="grid_cell col-3"></section>
+                            <section class="grid_cell col-3"></section>
+                        </section>
+                        <!-- end of inner row  -->
+                        <!-- inner row  -->
+                        <section class="grid_row row">
+                            <section class="grid_cell col-3"></section>
+                            <section class="grid_cell col-3"></section>
+                            <section class="grid_cell col-3"></section>
+                            <section class="grid_cell col-3"></section>
+                        </section>
+                        <!-- end of inner row -->
+                    </section>
+                    <!-- end of outer row-->
+                    <!-- outer row-->
+                    <section class="small_grid_row">
+                        <!-- inner row -->
+                        <section class="grid_row row">
+                            <section class="grid_cell col-3"></section>
+                            <section class="grid_cell col-3"></section>
+                            <section class="grid_cell col-3"></section>
+                            <section class="grid_cell col-3"></section>
+                        </section>
+                        <!-- end of inner row -->
+                        <!-- inner row  -->
+                        <section class="grid_row row">
+                            <section class="grid_cell col-3"></section>
+                            <section class="grid_cell col-3"></section>
+                            <section class="grid_cell col-3"></section>
+                            <section class="grid_cell col-3"></section>
+                        </section>
+                        <!-- end of inner row  -->
+                    </section>
+                    <!-- end of outer row -->
+                </section>
+                <!-- end of small grid 4x4 -->
+
+                <!-- big grid 9x9 -->
+                <section class="d-none big_grid mx-auto">
+                    <!-- outer row  -->
+                    <section class="big_grid_row">
+                        <!-- inner row -->
+                        <section class="grid_row row">
+                            <section class="grid_cell selected"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                        </section>
+                        <!-- inner row -->
+                        <section class="grid_row row">
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                        </section>
+                        <!-- inner row -->
+                        <section class="grid_row row">
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                        </section>
+                    </section>
+                    <!-- outer row -->
+                    <section class="big_grid_row">
+                        <!-- inner row -->
+                        <section class="grid_row row">
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                        </section>
+                        <!-- inner row -->
+                        <section class="grid_row row">
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                        </section>
+                        <!-- inner row -->
+                        <section class="grid_row row">
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                        </section>
+                    </section>
+                    <!-- outer row -->
+                    <section class="big_grid_row">
+                        <!-- inner row -->
+                        <section class="grid_row row">
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                        </section>
+                        <!-- inner row -->
+                        <section class="grid_row row">
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                        </section>
+                        <!-- inner row -->
+                        <section class="grid_row row">
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                            <section class="grid_cell"></section>
+                        </section>
+                    </section>
+                </section>
+                <!-- end of big grid 9x9 -->
+            </main>
+            <!-- end of grids -->
+        </div>
+        <!-- main content -->
+        
+        <!-- side content -->
+        <aside>
+            <!-- username -->
+            <h1>Welcome <span id="username_span"></span></h1>
+            <!-- timer -->
+            <h2 id="timer"></h2>
+            <!-- start button -->
+            <button id="start_button">Start</button>
+            <!-- finish button (for debuging purpose)-->
+            <button id="finish_button"><i class="fa-solid fa-flag-checkered"></i></button>
+        </aside>
+        <!-- end of side content -->
+    </div>
+    <!-- end of page container -->
+
+    <!-- font awesome free personal kit -->
+    <script src="https://kit.fontawesome.com/a3282cda9b.js" crossorigin="anonymous"></script>
+    <!-- functions file -->
+    <script src="./scripts/home_functions.js"></script>
+    <!-- start game file -->
+    <script src="./scripts/home_startGame.js"></script>
+    <!-- consuming file -->
+    <script src="./scripts/home.js"></script>
+</body>
+</html>

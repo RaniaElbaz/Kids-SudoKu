@@ -1,0 +1,33 @@
+.maincontainer{
+    @extend .row;
+    padding: 1rem;
+    .group{
+        @extend .col-12;
+        @extend .col-md-6;
+        margin-bottom: 4rem;
+        padding: 2rem;
+        .images{
+            @extend .col-12;
+            @extend .row;
+            margin-bottom: 1rem;
+            .image_container{
+                @extend .col-6;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $color_pink;
+                border: 1px solid $color_white;
+                img{
+                    @extend .image_size_default;
+                }
+            }
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            button{
+                @extend %button;
+            }    
+        }
+    }
+}

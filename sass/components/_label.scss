@@ -1,0 +1,8 @@
+%label{
+    @extend .fw_label;
+    @extend .font_default;
+    width: 100%;
+    display: block;
+    color: $color_black;
+    @extend .fs_large;
+}

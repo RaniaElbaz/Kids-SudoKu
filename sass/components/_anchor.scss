@@ -1,0 +1,11 @@
+@import '../abstracts/variables';
+
+%anchor__button{
+    background-color: $root_bgcolor;
+    text-align: center;
+    border: 2px solid $nav__bordercolor;
+    border-top-left-radius: $root_borderradius;
+    border-bottom-right-radius: $root_borderradius;
+    margin: 10px;
+    padding: 20px;
+}
